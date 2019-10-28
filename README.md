@@ -3,4 +3,4 @@
 Medieinstitutet
 ================
 
-Min första lab för kursen JavaScript 1
+Min första laboration för kursen JavaScript 1
