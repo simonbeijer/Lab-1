@@ -5,37 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
     <script src="js/main.js"></script>
     <title>Document</title>
 </head>
 <body>
+    <div class="startGame">
+        <div>
+            <button onclick="startGame()">Start Game</button>
+        </div>
+    </div>
     <div class="enterNameDiv">
         <div>
-            <label id="name">Enter Name
-                <form>
-                    <input id="name" type="text" value="..." ></input>
-                    <input type="button" value="click" onclick="getName()">
-                </form>
+            <label><h2>Enter Name</h2>
+                    <input id="nameInput" type="text"><br>
+                    <input type="button" value="Enter" onclick="getName()">
             </label>
         </div>
 
     </div>
     <header>
-        <h1>Laboration 1</h1>
+        <div class="headerLeft">
+            <h1>Laboration 1</h1>
+        </div>
+        <div class="headerRight">
+            <h3>Player: </h3>
+            <h3 class="playerName"></h3>
+        </div>
     </header>
 
     <main>
-        <div>
+        <div class="outputUppgift">
+            <h2>Uppgift</h2>
+            <p></p>
+            
+        </div>
+        <div class="outputVal">
+                <h3>val</h3>
+                <p></p>
+        </div>
+        <div class="getInput">
             <label>Input
-                <input class="getInput" type="text">
+                <input type="text" id="getInput">
+                <button type="button" onclick="getInput()">Enter</button>
             <label>
         </div>
+
     </main>
 
     <footer>
         <div>
             <p>&copy; Simon Beijer FED19G</p>
         </div>
+        <div class="logo">
+                <img class="logo" src="img/logo.jpg">
+            </div>
     </footer>
 </body>
 </html>
