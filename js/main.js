@@ -1,14 +1,14 @@
+// My global vaiables
+let playerName;
+
+/**
+ * Removes startdiv
+ */
 function startGame() {
     document.querySelector(".startGame").style.display = "none";
 }
 
-
-
-let playerName;
-let input;
-
 /**
-*
 *
 *
 *
@@ -19,10 +19,5 @@ function getName() {
     console.log(playerName);
     document.querySelector(".enterNameDiv").style.display = "none";
     document.querySelector(".playerName").innerText = playerName;
-}
-
-
-function getInput() {
-    var input = document.getElementById("getInput").value;
-    console.log(input);
+    // document.querySelector(".uppgift").innerText = "Välkommen till fångarna på fortet " + playerName;
 }

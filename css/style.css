@@ -110,6 +110,17 @@ main {
     justify-content: center;
 }
 
+.outputUppgift h2 {
+    margin: 1rem;
+    position: absolute;
+}
+
+.uppgift {
+    width: 70%;
+    height: 70%;
+    margin: auto;
+}
+
 .outputVal {
     background-color: whitesmoke;
     border: solid rgba(0, 0, 0, 0.322) 10px;
@@ -120,10 +131,21 @@ main {
     justify-content: center;
 }
 
+.outputVal h3 {
+    margin: 1rem;
+    position: absolute;
+}
+
+.val {
+    width: 70%;
+    height: 70%; 
+    margin: auto; 
+}
+
 .getInput {
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.61);
+    background-color: rgba(0, 0, 0, 0.7);
     max-width: 600px;
     min-height: 60px;
     margin: auto;
@@ -137,16 +159,20 @@ main {
 
 input[type=button] {
     color: whitesmoke;
-    background-color: rgba(0, 0, 0, 0.411);
+    background-color: rgba(0, 0, 0, 0.7);
     border: none;
     padding: 1rem;
     font-size: 1rem;
     margin-top: 1rem;
 }
 
-.getInput input,label {
+.getInput label {
     font-size: 2rem;
     color: whitesmoke;
+}
+
+.getInput input {
+    font-size: 2rem;
 }
 
 button {
@@ -163,5 +189,4 @@ footer {
     justify-content: space-between;
     position: relative;
     margin: 0 2rem 0 2rem;
-
 }
