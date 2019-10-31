@@ -25,16 +25,21 @@ header {
     flex-grow: 1;
 }
 
-header h1 {
-    padding: 1rem 0 0 2rem;
-}
-
 header .headerLeft {
     flex-grow: 1;
     display: flex;
     justify-content: flex-start;
+    padding: 1rem 0 0 2rem;
 }
-header .headerRight {
+
+header .headerPoints {
+    display: flex;
+    text-align: center;
+    justify-content: flex-end;
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+header .headerName {
     display: flex;
     text-align: center;
     justify-content: flex-end;
