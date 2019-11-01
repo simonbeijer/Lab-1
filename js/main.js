@@ -12,7 +12,9 @@ let counter6 = 6;
 const uppgiften = document.querySelector(".uppgift");
 const valen = document.querySelector(".val");
 const printInput = document.querySelector(".getInput");
+const submitButton = document.querySelector(".getInput button");
 const printInputGame = document.querySelector(".getInputGame");
+const subminInputButtonGame = document.querySelector(".getInputGame button");
 
 
 
@@ -43,14 +45,15 @@ function getName() {
     document.querySelector(".playerPoints").innerText = points;
     document.querySelector(".uppgift").innerText = "Välkommen " + playerName + "! Du står nu framför en stor och tung dörr. Du vet inte vad som vänta bakom dörren.";
     document.querySelector(".val").innerText = "För att öppna skriv: öppna";
+    // submitButton.onclick = getInput;
 }
 
-function displayInput() {
-    document.querySelector(".getInput").display = "flex";
-    document.querySelector(".getInputGame").style.display = "none";
-}
+// function displayInput() {
+//     document.querySelector(".getInput").display = "flex";
+//     document.querySelector(".getInputGame").style.display = "none";
+// }
 
-function displayGame() {
+// function displayGame() {
 
-}
+// }
 
