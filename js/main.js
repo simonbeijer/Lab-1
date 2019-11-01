@@ -7,33 +7,32 @@ let counter2 = 2;
 let randomNumber;
 let counter6 = 6;
 
+randomNumber = Math.floor(Math.random() * 100) + 1;
+
+
 
 // My print const shortcuts
 const uppgiften = document.querySelector(".uppgift");
 const valen = document.querySelector(".val");
 const printInput = document.querySelector(".getInput");
+const inputId =  document.querySelector("#getInput");
 const submitButton = document.querySelector(".getInput button");
 const printInputGame = document.querySelector(".getInputGame");
 const subminInputButtonGame = document.querySelector(".getInputGame button");
 
 
 
-randomNumber = Math.floor(Math.random() * 100) + 1;
-
-
-console.log(randomNumber);
 
 /**
- * Removes startdiv
+ * Removes startdiv on click
  */
 function startGame() {
     document.querySelector(".startGame").style.display = "none";
 }
 
 /**
-*
-*
-*
+* Function that gets namn i variable and removes the getName div then displays the name vaiable it in game.
+* Then prints out the first alternativ.
 */
 function getName() {
     playerName = document.getElementById("nameInput").value;
@@ -43,17 +42,6 @@ function getName() {
     document.querySelector(".enterNameDiv").style.display = "none";
     document.querySelector(".playerName").innerText = playerName;
     document.querySelector(".playerPoints").innerText = points;
-    document.querySelector(".uppgift").innerText = "Välkommen " + playerName + "! Du står nu framför en stor och tung dörr. Du vet inte vad som vänta bakom dörren.";
-    document.querySelector(".val").innerText = "För att öppna skriv: öppna";
-    // submitButton.onclick = getInput;
+    uppgiften.innerText = "Välkommen " + playerName + "! Du står nu framför en stor och tung dörr. Du vet inte vad som vänta bakom dörren.";
+    valen.innerText = "För att öppna skriv: öppna";
 }
-
-// function displayInput() {
-//     document.querySelector(".getInput").display = "flex";
-//     document.querySelector(".getInputGame").style.display = "none";
-// }
-
-// function displayGame() {
-
-// }
-
