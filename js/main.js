@@ -6,7 +6,11 @@ let inputGame;
 let counter2 = 2;
 let randomNumber;
 let counter6 = 6;
+let activRoom1 = "rum 1";
+let activRoom2 = "rum 2";
+let activRoom3 = "rum 3";
 
+// Creating random number for 
 randomNumber = Math.floor(Math.random() * 100) + 1;
 
 
@@ -44,4 +48,23 @@ function getName() {
     document.querySelector(".playerPoints").innerText = points;
     uppgiften.innerText = "Välkommen " + playerName + "! Du står nu framför en stor och tung dörr. Du vet inte vad som vänta bakom dörren.";
     valen.innerText = "För att öppna skriv: öppna";
+}
+
+
+/**
+ * A function the checks if 
+ */
+function gameOver() {
+    if(activRoom1 === "" && activRoom2 === "" && activRoom3 === "") {
+        console.log("slut");
+        setInterval(gameOverText, 5000);
+    }
+}
+/**
+ * 
+ */
+function gameOverText() {
+    document.querySelector(".gameOver").style.display = "flex";
+    document.querySelector(".gameOver h4").innerText = "Bra jobbat " + playerName + "! " + "Du fick " + points + "nycklar";
+
 }

@@ -34,6 +34,7 @@ function rum1() {
     if (counter6 > 1) {
         
         if (inputGame == numberString) {
+            activRoom1 = "";
             uppgiften.innerText = "Rätt " + playerName + "!";
             valen.innerText = "För att gå vidare till nästa rum skriv: vidare igen";
             counter6 = "0";
@@ -41,15 +42,16 @@ function rum1() {
             document.querySelector(".playerPoints").innerText = points;
             submitButton.onclick = getInput;
             inputId.value = "";
+            gameOver();
         } else if (inputGame < numberString) {
             counter6--;
             uppgiften.innerText = "Fel! för LÅGT du har " + counter6 + " gisningar kvar." ;
-            valen.innerText = "Välj ett numer mellan : 1-100";
+            valen.innerText = "Välj ett nummer mellan : 1-100";
             inputId.value = "";
         } else if (inputGame > numberString) {
             counter6--;
             uppgiften.innerText = "Fel! för HÖGT du har " + counter6 + " gisningar kvar." ;
-            valen.innerText = "Välj ett numer mellan : 1-100";
+            valen.innerText = "Välj ett nummer mellan : 1-100";
             inputId.value = "";
         }
     }  else {
@@ -58,6 +60,8 @@ function rum1() {
             counter6 = "0";
             submitButton.onclick = getInput;
             inputId.value = "";
+            activRoom1 = "";
+            gameOver();
         }
 }
 
@@ -74,17 +78,21 @@ function rum2() {
     if (counter2 > -1) {
         
         if(inputGame == 6) {
+            activRoom2 = "";
             uppgiften.innerText = "Rätt " + playerName + "!";
             valen.innerText = "För att gå vidare till nästa rum skriv: vidare återigen";
             points++;
             document.querySelector(".playerPoints").innerText = points;
             submitButton.onclick = getInput;
             inputId.value = "";
+            gameOver();
         } else if (counter2 == 0) {
+            activRoom2 = "";
             uppgiften.innerText = "Du har förbrukat dina försök. Du fick ingen nyckel.";
             valen.innerText = "För att gå vidare till nästa rum skriv: vidare återigen";
             inputId.value = "";
             submitButton.onclick = getInput;
+            gameOver();
         } 
         else {
             uppgiften.innerText = "Fel! du har " + counter2 + " kvar." ;
@@ -103,16 +111,22 @@ function rum3() {
     console.log("input", input);
     console.log("rum3 function");
     console.log(inputGame);
-    if(inputGame === "vatten") {
+    if(inputGame === "vatten" || "Vatten") {
+        activRoom3 = "";
         points++;
         document.querySelector(".playerPoints").innerText = points;
-        uppgiften.innerText = "Rätt " + playerName + "!" + " Du fick " + points + " bra jobbat! vatten är rätt för det kan bära stora fartyg." ;
+        uppgiften.innerText = "Rätt " + playerName + "!" + " Du fick " + points + " bra jobbat! Vatten är rätt för det kan bära stora fartyg." ;
         valen.innerText = "Du har ny klarat ut spelet för att köra igen uppdatera sidan.";
         inputId.value = "";
+        submitButton.onclick = getInput;
+        gameOver();
     } else {
-        uppgiften.innerText = "Fel! Du fick " + points + " Nycklar" + " bra jobbat! "
+        activRoom3 = "";
+        uppgiften.innerText = "Fel! Du fick " + points + " Nycklar" + " bra jobbat! " +
         "Rätt svar var vatten (för det kan bära stora fartyg)." ;
         valen.innerText = "Du har nu klarat ut spelet för att köra igen uppdatera sidan.";
         inputId.value = "";
+        submitButton.onclick = getInput;
+        gameOver();
     }
 }
