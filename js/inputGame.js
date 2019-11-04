@@ -3,7 +3,6 @@
  * When something is written the matching room function is run.
  */
 let getInputGame = function () {
-    console.log(input);
     inputGame = document.querySelector("#getInput").value;
     switch (input) {
         case "rum 1":
@@ -26,14 +25,8 @@ let getInputGame = function () {
  * game is checked with gameOver then sends the player back to first input.
  */
 function rum1() {
-    console.log("input", input);
-    console.log("inputGame", inputGame);
-    console.log(randomNumber);
     numberString = '' + randomNumber;
-    console.log(numberString);
-
     if (counter6 > 0) {
-
         if (inputGame == numberString) {
             activRoom1 = "";
             uppgiften.innerText = "Rätt " + playerName + "!";
@@ -85,9 +78,7 @@ function rum1() {
  * game is checked with gameOver then sends the player back to first input.
  */
 function rum2() {
-
     if (counter2 > -1) {
-
         if (inputGame == 6) {
             activRoom2 = "";
             uppgiften.innerText = "Rätt " + playerName + "!";
@@ -122,15 +113,12 @@ function rum2() {
  * When its done you can go back to rum and is checked for gameOver.
  */
 function rum3() {
-    console.log("input", input);
-    console.log("rum3 function");
-    console.log(inputGame);
-    if (inputGame === "vatten" || "Vatten") {
+    if (inputGame === "vatten" || inputGame === "Vatten") {
         activRoom3 = "";
         points++;
         document.querySelector(".playerPoints").innerText = points;
         uppgiften.innerText = "Rätt " + playerName + "!" + " Du fick " + points +
-            "nycklar" + " bra jobbat! Vatten är rätt för det kan bära stora fartyg.";
+            " nycklar" + " bra jobbat! Vatten är rätt för det kan bära stora fartyg.";
         valen.innerText = "För att gå vidare till nästa rum skriv: rum";
         inputId.value = "";
         submitButton.onclick = getInput;
@@ -138,7 +126,7 @@ function rum3() {
         gameOver();
     } else {
         activRoom3 = "";
-        uppgiften.innerText = "Fel! Du fick " + points + " nycklar" + " bra jobbat! " +
+        uppgiften.innerText = "Fel! Du fick " + points + " nycklar. " +
             "Rätt svar var vatten (för det kan bära stora fartyg).";
         valen.innerText = "För att gå vidare till nästa rum skriv: rum";
         inputId.value = "";

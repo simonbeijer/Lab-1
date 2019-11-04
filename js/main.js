@@ -54,9 +54,6 @@ function startGame() {
 */
 function getName() {
     playerName = document.getElementById("nameInput").value;
-    console.log("hello");
-    console.log(playerName);
-    console.log(points);
     document.querySelector(".enterNameDiv").style.display = "none";
     document.querySelector(".playerName").innerText = playerName;
     document.querySelector(".playerPoints").innerText = points;
@@ -87,7 +84,6 @@ printInput.addEventListener("keyup", function (event) {
  */
 function gameOver() {
     if (activRoom1 === "" && activRoom2 === "" && activRoom3 === "") {
-        console.log("slut");
         setInterval(gameOverText, 4000);
     }
 }

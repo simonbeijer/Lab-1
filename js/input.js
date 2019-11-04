@@ -8,8 +8,6 @@
  */
 let getInput = function () {
     input = document.querySelector("#getInput").value;
-    console.log(input);
-
     switch (input) {
         case "öppna":
             uppgiften.innerText = "Välkommen till fortet " + playerName + "!" + " Vågar du gå vidare?/Gunde";
@@ -71,7 +69,7 @@ let getInput = function () {
             valen.innerText = "Testa att skriv: rum";
             inputId.value = "";
             break;
-        case "fuska!":
+        case "¡aksuf!":
             inputId.value = "";
             points = 99;
             activRoom1 = "";
@@ -81,6 +79,7 @@ let getInput = function () {
             break;
         default:
             uppgiften.innerText = "Jag förstår inte vad du menar...testa igen";
+            valen.innerText = "Testa att skriv: rum";
             inputId.value = "";
     }
 }
@@ -88,16 +87,10 @@ let getInput = function () {
 
 
 
+
+
 // Alternativ code structure. Try later for code refactoring
-
 // function a() {
-//     uppgiften.innerText = "Välkommen till fortet " + playerName + "!" + " Vågar du gå vidare?/Gunde";
-//     valen.innerText = "För att gå vidare skriv: vidare";
-//     document.querySelector("#getInput").value = "";
-//     submitButton.onclick = b
-// }
-
-// function b() {
 //     input.value
 //     if () {
 //     }
