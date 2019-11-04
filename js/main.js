@@ -93,6 +93,6 @@ function gameOver() {
  */
 function gameOverText() {
     document.querySelector(".gameOver").style.display = "flex";
-    document.querySelector(".gameOver h4").innerText = "Bra jobbat " + playerName + "! " + "Du fick " + points + "nycklar";
+    document.querySelector(".gameOver h4").innerText = "Bra jobbat " + playerName + "! " + "Du fick " + points + " nycklar";
 
 }

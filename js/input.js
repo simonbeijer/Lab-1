@@ -15,7 +15,7 @@ let getInput = function () {
             inputId.value = "";
             break;
         case "rum":
-            uppgiften.innerText = "Du kan välja " + activRoom1 + " " + activRoom2 + " " + activRoom3 + "/Gunde";
+            uppgiften.innerText = "Rum som är öpnna är " + activRoom1 + " " + activRoom2 + " " + activRoom3 + "/Gunde";
             valen.innerText = "För att gå in välj ett rum: " + activRoom1 + " " + activRoom2 + " " + activRoom3;
             inputId.value = "";
             break;
@@ -28,7 +28,7 @@ let getInput = function () {
                 enter = 1;
                 inputId.value = "";
             } else {
-                uppgiften.innerText = "Du har redan förbrukat ditt försök/Gunde";
+                uppgiften.innerText = "Rummet är låst. Du har redan förbrukat ditt försök/Gunde";
                 valen.innerText = "För att gå vidare till nästa rum skriv: rum";
                 inputId.value = "";
             }
@@ -42,7 +42,7 @@ let getInput = function () {
                 enter = 1;
                 inputId.value = "";
             } else {
-                uppgiften.innerText = "Du har redan förbrukat ditt försök/Gunde";
+                uppgiften.innerText = "Rummet är låst. Du har redan förbrukat ditt försök/Gunde";
                 valen.innerText = "För att gå vidare till nästa rum skriv: rum";
                 inputId.value = "";
             }
@@ -55,7 +55,7 @@ let getInput = function () {
                 enter = 1;
                 inputId.value = "";
             } else {
-                uppgiften.innerText = "Du har redan förbrukat ditt försök/Gunde";
+                uppgiften.innerText = "Rummet är låst. Du har redan förbrukat ditt försök/Gunde";
                 valen.innerText = "För att gå vidare till nästa rum skriv: rum";
                 inputId.value = "";
             }
