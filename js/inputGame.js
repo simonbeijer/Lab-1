@@ -21,9 +21,9 @@ let getInputGame = function () {
 
 /**
  * This function is a game that creates a random number and the player has to find it.
- * The input is checked if it is to high or to low, then duduct from the trys.
- * If there are no trys left or the input is right the player gets a points and
- * game is checked for gameOver then sends the player back to first input
+ * The input is checked if it is to high or to low, then lowers from the tries.
+ * If there are no tries left or the input is right the player gets a points and
+ * game is checked with gameOver then sends the player back to first input.
  */
 function rum1() {
     console.log("input", input);
@@ -32,13 +32,12 @@ function rum1() {
     numberString = '' + randomNumber;
     console.log(numberString);
 
-    if (counter6 > 1) {
+    if (counter6 > 0) {
 
         if (inputGame == numberString) {
             activRoom1 = "";
             uppgiften.innerText = "Rätt " + playerName + "!";
             valen.innerText = "För att gå vidare till nästa rum skriv: rum";
-            counter6 = "0";
             points++;
             document.querySelector(".playerPoints").innerText = points;
             submitButton.onclick = getInput;
@@ -50,30 +49,40 @@ function rum1() {
             uppgiften.innerText = "Fel! för LÅGT du har " + counter6 + " gisningar kvar.";
             valen.innerText = "Välj ett nummer mellan : 1-100";
             inputId.value = "";
+            if (counter6 == 0) {
+                uppgiften.innerText = "Du har förbrukat dina försök. Du fick ingen nyckel.";
+                valen.innerText = "För att gå vidare till nästa rum skriv: rum";
+                submitButton.onclick = getInput;
+                enter = 0;
+                inputId.value = "";
+                activRoom1 = "";
+                gameOver();
+            }
         } else if (inputGame > numberString) {
             counter6--;
             uppgiften.innerText = "Fel! för HÖGT du har " + counter6 + " gisningar kvar.";
             valen.innerText = "Välj ett nummer mellan : 1-100";
             inputId.value = "";
+            if (counter6 == 0) {
+                uppgiften.innerText = "Du har förbrukat dina försök. Du fick ingen nyckel.";
+                valen.innerText = "För att gå vidare till nästa rum skriv: rum";
+                submitButton.onclick = getInput;
+                enter = 0;
+                inputId.value = "";
+                activRoom1 = "";
+                gameOver();
+            }
         }
-    } else {
-        uppgiften.innerText = "Du har förbrukat dina försök. Du fick ingen nyckel.";
-        valen.innerText = "För att gå vidare till nästa rum skriv: rum";
-        counter6 = "0";
-        submitButton.onclick = getInput;
-        enter = 0;
-        inputId.value = "";
-        activRoom1 = "";
-        gameOver();
     }
 }
 
 
 
 /**
- * This function checks if the input and displays diffrent inner text from the awnser
- * 
- * 
+ * This function checks if the input and displays different innertext from the answer.
+ * The input is checked, then lowers from the tries.
+ * If there are no tries left or the input is right the player gets a points and
+ * game is checked with gameOver then sends the player back to first input.
  */
 function rum2() {
 
@@ -82,7 +91,7 @@ function rum2() {
         if (inputGame == 6) {
             activRoom2 = "";
             uppgiften.innerText = "Rätt " + playerName + "!";
-            valen.innerText = "För att gå vidare till nästa rum skriv: vidare återigen";
+            valen.innerText = "För att gå vidare till nästa rum skriv: rum";
             points++;
             document.querySelector(".playerPoints").innerText = points;
             submitButton.onclick = getInput;
@@ -92,7 +101,7 @@ function rum2() {
         } else if (counter2 == 0) {
             activRoom2 = "";
             uppgiften.innerText = "Du har förbrukat dina försök. Du fick ingen nyckel.";
-            valen.innerText = "För att gå vidare till nästa rum skriv: vidare återigen";
+            valen.innerText = "För att gå vidare till nästa rum skriv: rum";
             inputId.value = "";
             submitButton.onclick = getInput;
             enter = 0;
@@ -108,8 +117,9 @@ function rum2() {
 
 
 /**
- * 
- * 
+ * This is a riddle that's only looking for one right answer.
+ * If the player gets it right there is a point otherwise no point.
+ * When its done you can go back to rum and is checked for gameOver.
  */
 function rum3() {
     console.log("input", input);
@@ -119,17 +129,18 @@ function rum3() {
         activRoom3 = "";
         points++;
         document.querySelector(".playerPoints").innerText = points;
-        uppgiften.innerText = "Rätt " + playerName + "!" + " Du fick " + points + " bra jobbat! Vatten är rätt för det kan bära stora fartyg.";
-        valen.innerText = "Du har ny klarat ut spelet för att köra igen uppdatera sidan.";
+        uppgiften.innerText = "Rätt " + playerName + "!" + " Du fick " + points +
+            "nycklar" + " bra jobbat! Vatten är rätt för det kan bära stora fartyg.";
+        valen.innerText = "För att gå vidare till nästa rum skriv: rum";
         inputId.value = "";
         submitButton.onclick = getInput;
         enter = 0;
         gameOver();
     } else {
         activRoom3 = "";
-        uppgiften.innerText = "Fel! Du fick " + points + " Nycklar" + " bra jobbat! " +
+        uppgiften.innerText = "Fel! Du fick " + points + " nycklar" + " bra jobbat! " +
             "Rätt svar var vatten (för det kan bära stora fartyg).";
-        valen.innerText = "Du har nu klarat ut spelet för att köra igen uppdatera sidan.";
+        valen.innerText = "För att gå vidare till nästa rum skriv: rum";
         inputId.value = "";
         submitButton.onclick = getInput;
         enter = 0;

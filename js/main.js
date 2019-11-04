@@ -1,4 +1,4 @@
-// My global vaiables.
+// My global variables.
 let playerName;
 let points = "0";
 let input;
@@ -41,25 +41,7 @@ nameInput.addEventListener("keyup", function (event) {
 
 
 /**
- * Function that lets enter button work the same way as a clicked button.
- * For game/room input.
- * @param {keybordEvent} event Built in javascript event
- */
-printInput.addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
-        if (enter === 1) {
-            event.preventDefault();
-            getInputGame();
-        } else {
-            event.preventDefault();
-            getInput();
-        }
-    }
-});
-
-
-/**
- * Removes startdiv on click.
+ * Removes start div on click.
  */
 function startGame() {
     document.querySelector(".startGame").style.display = "none";
@@ -106,11 +88,11 @@ printInput.addEventListener("keyup", function (event) {
 function gameOver() {
     if (activRoom1 === "" && activRoom2 === "" && activRoom3 === "") {
         console.log("slut");
-        setInterval(gameOverText, 5000);
+        setInterval(gameOverText, 4000);
     }
 }
 /**
- * Function that displays gameover div with refresh button.
+ * Function that displays gameOver div with refresh button.
  * Then name and points is shown.
  */
 function gameOverText() {

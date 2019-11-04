@@ -29,10 +29,10 @@ let getInput = function () {
                 submitButton.onclick = getInputGame;
                 enter = 1;
                 inputId.value = "";
-                inputId.value = "";
             } else {
                 uppgiften.innerText = "Du har redan förbrukat ditt försök/Gunde";
                 valen.innerText = "För att gå vidare till nästa rum skriv: rum";
+                inputId.value = "";
             }
             break;
         case "rum 2":
@@ -46,6 +46,7 @@ let getInput = function () {
             } else {
                 uppgiften.innerText = "Du har redan förbrukat ditt försök/Gunde";
                 valen.innerText = "För att gå vidare till nästa rum skriv: rum";
+                inputId.value = "";
             }
             break;
         case "rum 3":
@@ -58,16 +59,20 @@ let getInput = function () {
             } else {
                 uppgiften.innerText = "Du har redan förbrukat ditt försök/Gunde";
                 valen.innerText = "För att gå vidare till nästa rum skriv: rum";
+                inputId.value = "";
             }
             break;
         case "hej":
             uppgiften.innerText = "Hej " + playerName;
+            inputId.value = "";
             break;
         case "hjälp":
             uppgiften.innerText = "Är du förvirrad " + playerName;
             valen.innerText = "Testa att skriv: rum";
+            inputId.value = "";
             break;
         case "fuska!":
+            inputId.value = "";
             points = 99;
             activRoom1 = "";
             activRoom2 = "";
@@ -76,13 +81,14 @@ let getInput = function () {
             break;
         default:
             uppgiften.innerText = "Jag förstår inte vad du menar...testa igen";
+            inputId.value = "";
     }
 }
 
 
 
 
-// Alternativ code structure
+// Alternativ code structure. Try later for code refactoring
 
 // function a() {
 //     uppgiften.innerText = "Välkommen till fortet " + playerName + "!" + " Vågar du gå vidare?/Gunde";

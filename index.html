@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <script defer src="js/inputGame.js"></script>
     <title>Lab-1 Game</title>
 </head>
+
 <body>
     <div class="startGame">
         <div>
@@ -19,9 +21,10 @@
     </div>
     <div class="enterNameDiv">
         <div>
-            <label><h2>Enter Name</h2>
-                    <input id="nameInput" type="text"><br>
-                    <input type="button" value="Enter" onclick="getName()">
+            <label>
+                <h2>Enter Name</h2>
+                <input id="nameInput" type="text"><br>
+                <input type="button" value="Enter" onclick="getName()">
             </label>
         </div>
     </div>
@@ -29,7 +32,7 @@
         <div>
             <h1>Spelet är slut...</h1>
             <h4></h4>
-            <button value="update" onclick="window.location.reload()" >Spela igen</button>
+            <button value="update" onclick="window.location.reload()">Spela igen</button>
         </div>
     </div>
     <header>
@@ -45,26 +48,24 @@
             <h3 class="playerName"></h3>
         </div>
     </header>
-
     <main>
         <div class="outputUppgift">
             <h2>Uppgift</h2>
             <div class="uppgift">
 
             </div>
-            
         </div>
         <div class="outputVal">
-                <h3>Val</h3>
-                <div class="val">
+            <h3>Val</h3>
+            <div class="val">
 
-                </div>
+            </div>
         </div>
         <div class="getInput">
             <label>Input
                 <input type="text" id="getInput">
                 <button type="button" onclick="getInput()">Enter</button>
-            <label>
+                <label>
         </div>
     </main>
 
@@ -73,8 +74,9 @@
             <p>&copy; Simon Beijer FED19G</p>
         </div>
         <div class="logo">
-                <img class="logo" src="img/logo.jpg">
-            </div>
+            <img class="logo" src="img/logo.jpg">
+        </div>
     </footer>
 </body>
+
 </html>
