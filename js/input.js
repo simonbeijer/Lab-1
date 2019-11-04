@@ -76,10 +76,11 @@ let getInput = function() {
         case "hej":
             uppgiften.innerText = "Hej " + playerName;
             break;
-        case "?":
+        case "hjälp":
             uppgiften.innerText = "Är du förvirrad " + playerName;
+            valen.innerText = "Testa att skriv: rum";
             break;
-        case "A1K3S3U7F":
+        case "fuska!":
             points = 99;
             activRoom1 = "";
             activRoom2 = "";

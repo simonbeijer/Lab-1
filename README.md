@@ -4,3 +4,5 @@ Medieinstitutet
 ================
 
 Min första laboration för kursen JavaScript 1
+
+Här finns mitt spel https://simonbeijer.github.io/Lab-1/.

@@ -140,6 +140,10 @@ main {
     flex-direction: column;
 }
 
+.gameOver div h1,h4 {
+    padding-bottom: 1rem;
+}
+
 .uppgift {
     width: 70%;
     height: 70%;

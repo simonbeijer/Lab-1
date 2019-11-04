@@ -27,6 +27,20 @@ const subminInputButtonGame = document.querySelector(".getInputGame button");
 
 
 
+
+let enterInput = document.querySelector(".getInput");
+
+enterInput.addEventListener("keyup", function(event) {
+    
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        getInput();
+    }
+});
+
+
+
+
 /**
  * Removes startdiv on click
  */
